@@ -1,0 +1,126 @@
+.transactions-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #131a20, #314456);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.transactions-title {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #00f5d4, #00bbf9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.transactions-sub {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.transactions-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.transactions-form input,
+.transactions-form select {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  flex: 1 1 200px;
+}
+
+.transactions-form input::placeholder {
+  color: #ccc;
+}
+
+.transactions-form button {
+  background: linear-gradient(to right, #00c6ff, #00ffbd);
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: black;
+}
+
+.transactions-form button:hover {
+  transform: scale(1.05);
+}
+
+.transactions-list {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.transactions-list h2 {
+  margin-bottom: 1rem;
+  color: #00f5d4;
+  font-size: 1.8rem;
+}
+
+.transactions-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.transactions-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 1rem;
+  color: white;
+}
+
+.transactions-list li.income {
+  border-left: 5px solid #00ffbd;
+}
+
+.transactions-list li.expense {
+  border-left: 5px solid #ff4d4d;
+}
+
+.empty-history {
+  color: #aaa;
+  font-style: italic;
+}
+
+.back-button-container {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.back-button {
+  background: linear-gradient(to right, #00c6ff, #00ffbd);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.back-button:hover {
+  transform: scale(1.05);
+}

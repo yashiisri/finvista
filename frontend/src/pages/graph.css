@@ -1,0 +1,161 @@
+.graph-container {
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.graph-title {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #00ffbd, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.graph-sub {
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.summary-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 220px;
+  box-shadow: 0 0 15px rgba(0,255,200,0.2);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card.income {
+  border-left: 6px solid #00ffbd;
+}
+.card.expense {
+  border-left: 6px solid #ff4d4d;
+}
+.card.balance {
+  border-left: 6px solid #00c6ff;
+}
+
+.chart-box {
+  max-width: 850px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 16px;
+}
+
+.graph-footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.back-button {
+  background: linear-gradient(to right, #00c6ff, #00ffbd);
+  color: black;
+  font-weight: bold;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.back-button:hover {
+  transform: scale(1.05);
+}
+.add-transaction-form {
+  margin-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 1.5rem;
+  border-radius: 14px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.add-transaction-form h2 {
+  color: #00ffbd;
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.form-row input, .form-row select {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  width: 180px;
+  outline: none;
+}
+
+.form-row input::placeholder {
+  color: #ccc;
+}
+
+.form-row button {
+  background: linear-gradient(to right, #00ffbd, #00c6ff);
+  border: none;
+  padding: 0.7rem 1.3rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s;
+}
+
+.form-row button:hover {
+  transform: scale(1.05);
+}
+.balance.negative {
+  border-left: 6px solid #ff4d4d;
+  background: rgba(255, 77, 77, 0.2);
+}
+
+.balance.positive {
+  border-left: 6px solid #00ffbd;
+  background: rgba(0, 255, 189, 0.1);
+}
+
+.toggle-btn {
+  margin: 2rem 0;
+}
+
+.toggle-btn button {
+  background: linear-gradient(to right, #00ffbd, #00c6ff);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.toggle-btn button:hover {
+  transform: scale(1.05);
+}

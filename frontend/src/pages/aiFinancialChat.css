@@ -1,0 +1,154 @@
+.chat-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #131a20, #314456);
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Title and subtitle */
+.chat-title {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #00ffbd, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.chat-sub {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Chat display area */
+.chat-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.15);
+  min-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* Empty state */
+.empty-chat {
+  text-align: center;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Individual messages */
+.chat-bubble {
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 14px;
+  width: fit-content;
+  max-width: 80%;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: 0 0 6px rgba(0, 255, 200, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.chat-bubble.user {
+  margin-left: auto;
+  background: #00c6ff;
+  color: #000;
+  border-bottom-right-radius: 0;
+}
+
+.chat-bubble.bot {
+  margin-right: auto;
+  background: #00ffbd;
+  color: #000;
+  border-bottom-left-radius: 0;
+}
+
+/* Form styling */
+.chat-form {
+  display: flex;
+  gap: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.chat-form input::placeholder {
+  color: #ccc;
+}
+
+.chat-form button {
+  background: linear-gradient(to right, #00c6ff, #00ffbd);
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.chat-form button:hover {
+  transform: scale(1.03);
+}
+
+/* Back button */
+.back-button-container {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.back-button {
+  background: linear-gradient(to right, #00c6ff, #00ffbd);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.back-button:hover {
+  transform: scale(1.05);
+}
+.delete-history-container {
+  margin: 2rem auto 0 auto;
+  text-align: center;
+}
+
+.delete-history-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.delete-history-btn:hover {
+  transform: scale(1.05);
+  background: #e60000;
+}

@@ -1,0 +1,196 @@
+.sip-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Title */
+.sip-title {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #00f5d4, #00bbf9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Subtitle */
+.sip-sub {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Features List (optional) */
+.sip-features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.sip-features span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid #00f5d4;
+  color: #00f5d4;
+  font-weight: bold;
+}
+
+/* Form */
+.sip-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.sip-form input {
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.sip-form input::placeholder {
+  color: #ccc;
+}
+
+.sip-form button {
+  background: linear-gradient(to right, #00f5d4, #00bbf9);
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sip-form button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, #00cfc8, #0096c7);
+}
+
+/* Results */
+.sip-result {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 500px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.2);
+  text-align: left;
+}
+
+/* Chart Box */
+.sip-graph {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #00f5d4;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* AI Response */
+.gemini-response {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #00bbf9;
+  border-radius: 10px;
+  font-style: italic;
+  color: #d0e9f5;
+  max-width: 600px;
+}
+
+/* Table Styling */
+.yearly-breakdown {
+  margin-top: 2rem;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.yearly-breakdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.yearly-breakdown th,
+.yearly-breakdown td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.yearly-breakdown th {
+  background-color: #00f5d4;
+  color: #000;
+}
+
+/* Back Button */
+.back-button-container {
+  margin-top: 3rem;
+}
+
+.back-button {
+  background: linear-gradient(to right, #00f5d4, #00bbf9);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.back-button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .sip-form input,
+  .sip-form button {
+    width: 100%;
+  }
+
+  .sip-result,
+  .sip-graph,
+  .gemini-response {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.gemini-response p {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+

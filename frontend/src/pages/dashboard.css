@@ -1,0 +1,229 @@
+.dashboard-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #131a20, #314456);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #00ffbd, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard-sub {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 cards per row */
+  gap: 2rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+.dashboard-card {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2.5rem 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(0, 255, 204, 0.15);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.dashboard-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #00ffbd30, #00c6ff10);
+  z-index: 0;
+  transition: opacity 0.4s;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.05);
+  border: 2px solid #00ffbd;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.4);
+}
+
+.dashboard-card h3 {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-card {
+    max-width: 90%;
+    height: 180px;
+  }
+}
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.card-desc {
+  font-size: 0.95rem;
+  color: #ccc;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 90%;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+.card-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 4px #00c6ffaa);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.user-info span {
+  font-weight: bold;
+  color: #333;
+}
+
+.user-info button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.user-info button:hover {
+  background-color: #d32f2f;
+}
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  color: #f44336;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Top-right logout button styling */
+.logout-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.logout-btn {
+  background-color: crimson;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: darkred;
+}
+
+/* Bigger greeting */
+.greeting {
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+/* Dropdown fix */
+/* Style the dropdown and its options */
+.add-transaction-form select {
+  background-color: #ffffff;  /* white background */
+  color: #000000;             /* black text */
+  border: 1px solid #00ffbd;
+  border-radius: 6px;
+  padding: 8px;
+  font-weight: 500;
+  outline: none;
+}
+
+/* Optional: style the dropdown options for visibility */
+.add-transaction-form select option {
+  background-color: #ffffff;  /* ensure readable background */
+  color: #000000;             /* black text always visible */
+}
+
