@@ -22,7 +22,7 @@ const Graph = () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/api/transactions/chart/${userId}`);
+      const res = await fetch(`https://finvista-backendd.onrender.com/api/transactions/chart/${userId}`);
       const data = await res.json();
 
       if (!data || typeof data !== 'object') return;
@@ -70,7 +70,7 @@ const Graph = () => {
       return;
     }
 
-    const res = await fetch('http://localhost:5000/api/transactions', {
+    const res = await fetch('https://finvista-backendd.onrender.com/api/transactions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
