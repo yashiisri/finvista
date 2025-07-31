@@ -12,7 +12,7 @@ const Savings = () => {
   // 🔥 Correct API call - only fetch logged-in user's savings goals
   const fetchGoals = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/savings/${userId}`);
+      const res = await fetch(`https://finvista-backendd.onrender.com/api/savings/${userId}`);
       const data = await res.json();
       setGoals(data || []);
     } catch (err) {
@@ -39,7 +39,7 @@ const Savings = () => {
   };
 
   const handleDelete = async (index) => {
-    await fetch(`http://localhost:5000/api/savings/delete`, {
+    await fetch(`https://finvista-backendd.onrender.com/api/savings/delete`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, index }),
@@ -48,7 +48,7 @@ const Savings = () => {
   };
 
   const handleComplete = async (index) => {
-    await fetch(`http://localhost:5000/api/savings/complete`, {
+    await fetch(`https://finvista-backendd.onrender.com/api/savings/complete`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, index }),
