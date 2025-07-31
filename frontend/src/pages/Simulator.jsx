@@ -56,7 +56,7 @@ const SipSimulator = () => {
     try {
       setIsLoading(true); 
 
-      const response = await fetch('http://localhost:5000/api/simulate', {
+      const response = await fetch('https://finvista-backendd.onrender.com/api/simulate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
