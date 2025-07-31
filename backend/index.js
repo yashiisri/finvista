@@ -6,7 +6,10 @@ const axios = require('axios');
 
 require('dotenv').config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://finvista-aj8a.onrender.com',
+  credentials: true,
+}));
 app.use(express.json());
 const bcrypt = require('bcrypt');
 
