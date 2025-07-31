@@ -18,7 +18,7 @@ const AIFinancialChat = () => {
 
   const fetchChatHistory = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/chat/${userId}`);
+      const res = await fetch(`https://finvista-backendd.onrender.com/api/chat/${userId}`);
       const data = await res.json();
       const formatted = data.map(c => ([
         {
@@ -41,7 +41,7 @@ const AIFinancialChat = () => {
   const handleDeleteHistory = async () => {
     if (!window.confirm('⚠️ Are you sure you want to delete all chat history?')) return;
     try {
-      await fetch(`http://localhost:5000/api/chat/${userId}`, {
+      await fetch(`https://finvista-backendd.onrender.com/api/chat/${userId}`, {
         method: 'DELETE',
       });
       setConversation([]);
@@ -64,7 +64,7 @@ const AIFinancialChat = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/chat', {
+      const response = await fetch('https://finvista-backendd.onrender.com/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId, question: query }),
