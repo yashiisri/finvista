@@ -1,7 +1,7 @@
 // pages/Home.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './home.css';
+import './Home.css';
 import bank from '../assets/bank.jpg'; // or use an external link if you don’t have local image
 
 const Home = () => {
