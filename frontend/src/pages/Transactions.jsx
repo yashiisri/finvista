@@ -9,7 +9,7 @@ const Transactions = () => {
 
   const fetchTransactions = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/user/${userId}`);
+      const res = await axios.get(`https://finvista-backendd.onrender.com/api/user/${userId}`);
       setTransactions(res.data.transactions || []);
     } catch (err) {
       console.error('Failed to fetch transactions:', err);
